@@ -1,0 +1,12 @@
+flowchart TD
+  U[Usuario] --> R[React: botón solo para admin]
+  R --> H[HTTP DELETE /api/usuarios/:id]
+  H --> E[Express]
+  E --> A{autenticar: token reconocido}
+  A -->|No| X[401: sin cambios]
+  A -->|Sí| B{autorizar: req.usuario.role es admin}
+  B -->|No: invitado| F[403: sin cambios]
+  B -->|Sí: admin| I{ID válido y usuario existente}
+  I -->|ID inválido| N[400: sin cambios]
+  I -->|No existe| Z[404: sin cambios]
+  I -->|Sí| D[Eliminar: 204]

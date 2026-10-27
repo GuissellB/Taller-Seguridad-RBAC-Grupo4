@@ -1,0 +1,15 @@
+{
+  "fecha": "2026-10-26",
+  "navegador": "Chromium headless (Playwright del entorno de verificación)",
+  "comprobaciones": [
+    "Invitado consulta 3 usuarios sin botones",
+    "DELETE manipulado devuelve 403",
+    "Admin muestra 3 botones",
+    "Eliminación real actualiza a 2 usuarios",
+    "Invitado observa persistencia del borrado en memoria",
+    "UI muestra 403 real sin modificar lista",
+    "UI maneja 401 real limpiando sesión"
+  ],
+  "erroresJavaScript": [],
+  "resultado": "7 comprobaciones de integración correctas"
+}
